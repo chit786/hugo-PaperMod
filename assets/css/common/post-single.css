@@ -168,7 +168,12 @@
     margin-inline-start: calc(var(--gap) * -2);
 }
 
+/* .post-content .highlight pre {
+    margin: 0;
+} */
+
 .post-content .highlight pre {
+    background-color: var(--theme) !important;
     margin: 0;
 }
 
@@ -198,7 +203,7 @@
     border-radius: 2px;
 }
 
-.post-content pre code {
+/* .post-content pre code {
     display: grid;
     margin: auto 0;
     padding: 10px;
@@ -207,7 +212,19 @@
     border-radius: var(--radius);
     overflow-x: auto;
     word-break: break-all;
+} */
+
+.post-content pre code {
+    display: block;
+    margin: auto 0;
+    padding: 10px;
+    /* Color of main code */
+    color: #abb2bf;
+    font-weight: 200;
+    overflow-x: auto;
+    word-break: break-all;
 }
+
 
 .post-content blockquote {
     margin: 20px 0;

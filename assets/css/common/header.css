@@ -91,3 +91,45 @@ body:not(.dark) #sun {
 .logo-switches {
     flex-wrap: inherit;
 }
+
+/* Home button hover: */
+.logo a:hover {
+    transition: 0.15s;
+    color: grey;
+}
+
+/* Social media hover: */
+svg:hover {
+    transition: 0.15s;
+}
+
+.social-icons a:nth-child(1) svg:hover {
+    color: gray !important;
+}
+
+.social-icons a:nth-child(2) svg:hover{
+    color: #C84370 !important;
+}
+
+.social-icons a:nth-child(3) svg:hover {
+    color: #0077b5 !important;
+}
+
+/* Night mode and day mode hover: */
+
+#moon:hover {
+    transition: 0.15s;
+    color: deepskyblue;
+}
+
+#sun:hover {
+    transition: 0.15s;
+    color: gold;
+}
+
+/* Hover of links in menu: */
+
+#menu a:hover {
+    transition: 0.15s;
+    color: grey;
+}
