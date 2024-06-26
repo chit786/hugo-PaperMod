@@ -150,7 +150,18 @@
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- template "_internal/google_analytics.html" . }}
+<!-- Google Analytics internal template -->
+{{- if .Site.GoogleAnalytics }}
+    <script>
+      if (localStorage.getItem("doNotTrack") === null) {
+        localStorage.setItem("doNotTrack", "1") // default value before any choice has been made
+      }
+      var doNotTrack = localStorage.getItem("doNotTrack");
+    </script>
+    {{ template "partials/templates/cookie-consent.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
+{{- end}}
+<!-- {{- template "_internal/google_analytics.html" . }} -->
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
