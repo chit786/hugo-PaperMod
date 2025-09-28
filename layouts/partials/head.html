@@ -151,7 +151,7 @@
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 <!-- Google Analytics internal template -->
-{{- if .Site.GoogleAnalytics }}
+{{- if site.GoogleAnalytics }}
     <script>
       if (localStorage.getItem("doNotTrack") === null) {
         localStorage.setItem("doNotTrack", "1") // default value before any choice has been made
